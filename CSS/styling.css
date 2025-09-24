@@ -1,0 +1,28 @@
+.capsule {
+  border: 1px solid black;
+  border-radius: 999px;
+  margin: 5px 3px;
+  padding: 5px 12px;
+  display: inline-block;
+  background-color: rgb(197, 222, 244);
+  font-weight: bold;
+}
+.img {
+    display: block;
+    border: 0px;
+  height: 150px;
+  border-radius: 15px;
+}
+.main {
+    border: 2px solid rgb(74, 159, 255);
+    border-radius: 15px;
+    padding: 5px 12px;
+    display: inline-block;
+    width: 225px;
+    background-color: rgb(177, 216, 251);
+    margin: 2px 150px;
+}
+h2 { margin: 2px 5px 3px 0px;}
+.body {
+  background-color: gray;
+}
