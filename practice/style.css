@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.top {
+    position: relative;
+background-image: url("assets/img/background.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center 11%;
+height: 700px;
+width: 100vw;
+}
+
+.box{
+    position:absolute;
+    top: 0;
+    height: 700px;
+    width: 100%;
+    opacity: 0.6;
+    background-color: black;
+}
+nav {
+    max-width: 90vw;
+    justify-content: space-between;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+nav img {
+    padding-left: 50px;
+    padding-top: 0px;
+    color: red;
+    width: 175px;
+    position: relative;
+    z-index: 10;
+}
+
+.top-right {
+margin-right: 6%;
+margin-top: -1%;
+z-index: 10;
+}
+
+label {
+    color: rgb(255, 255, 255);
+}
+
+.lang {
+position: relative;
+background: rgba(0, 0, 0, 0.63);
+  border: 1px solid rgb(114, 114, 114);
+  width: 128px;
+  height: 38px;
+  border-radius: 6px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn {
+    position: relative;
+    background-color: red;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    width: 77px;
+  height: 35px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.main {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: -11vh;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    color: white;
+    font-family: "Open Sans";
+    
+}
+
+.main :first-child {
+    font-weight: 900;
+    font-size: 57px;
+    letter-spacing: -1px;
+    margin-left: -15px;
+    margin-top: 15px;
+}
+
+.main :nth-child(2) {
+    font-weight: 900;
+    font-size: 53px;
+    margin-bottom: 1%;
+}
+
+.main :nth-child(3) {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 2%;
+}
+
+.main :nth-child(4) {
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: -1px;
+}
