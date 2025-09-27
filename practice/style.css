@@ -1,116 +1,477 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: black;
+  background-color: black;
 }
 
 .top {
-    position: relative;
-background-image: url("assets/img/background.jpg");
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center 11%;
-height: 700px;
-width: 100vw;
+  position: relative;
+  background-image: url("assets/img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 11%;
+  height: 700px;
+  width: 100vw;
 }
 
-.box{
-    position:absolute;
-    top: 0;
-    height: 700px;
-    width: 100%;
-    opacity: 0.6;
-    background-color: black;
+.box {
+  position: absolute;
+  top: 0;
+  height: 700px;
+  width: 100%;
+  opacity: 0.6;
+  background-color: black;
 }
 nav {
-    max-width: 90vw;
-    justify-content: space-between;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    height: 100px;
+  max-width: 90vw;
+  justify-content: space-between;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  height: 100px;
 }
 
 nav img {
-    padding-left: 50px;
-    padding-top: 0px;
-    color: red;
-    width: 175px;
-    position: relative;
-    z-index: 10;
+  padding-left: 50px;
+  padding-top: 0px;
+  color: red;
+  width: 175px;
+  position: relative;
+  z-index: 10;
 }
 
 .top-right {
-margin-right: 6%;
-margin-top: -1%;
-z-index: 10;
+  margin-right: 6%;
+  margin-top: -1%;
+  z-index: 10;
 }
 
 label {
-    color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 
 .lang {
-position: relative;
-background: rgba(0, 0, 0, 0.63);
+  position: relative;
+  background: rgba(0, 0, 0, 0.63);
   border: 1px solid rgb(114, 114, 114);
   width: 128px;
   height: 38px;
   border-radius: 6px;
   text-align: center;
   color: rgb(255, 255, 255);
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .btn {
-    position: relative;
-    background-color: red;
-    color: white;
-    text-align: center;
-    border-radius: 6px;
-    width: 77px;
+  position: relative;
+  background-color: red;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  width: 77px;
   height: 35px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .main {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    margin-top: -11vh;
-    justify-content: center;
-    position: relative;
-    flex-direction: column;
-    color: white;
-    font-family: "Open Sans";
-    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  flex-direction: column;
+  color: white;
+  font-family: "Open Sans";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  z-index: 10;
+  text-align: center;
 }
 
 .main :first-child {
-    font-weight: 900;
-    font-size: 57px;
-    letter-spacing: -1px;
-    margin-left: -15px;
-    margin-top: 15px;
+  font-weight: 900;
+  font-size: 57px;
+  letter-spacing: -1px;
+  margin-left: -15px;
+  margin-top: 15px;
 }
 
 .main :nth-child(2) {
-    font-weight: 900;
-    font-size: 53px;
-    margin-bottom: 1%;
+  font-weight: 900;
+  font-size: 53px;
+  margin-bottom: 1%;
 }
 
 .main :nth-child(3) {
-    font-weight: 600;
-    font-size: 20px;
-    margin-bottom: 2%;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 2%;
 }
 
 .main :nth-child(4) {
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: -1px;
+  padding-top: 2vh;
+  margin-bottom: 1vh;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  top: 73%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.email {
+  width: 350px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgb(114, 114, 114);
+  padding: 16px 20px;
+  color: white;
+  border-radius: 4px;
+  font-size: 16px;
+  height: 56px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 16px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 24px;
+  font-weight: 600;
+  height: 56px;
+  box-sizing: border-box;
+}
+
+.curve-separator {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, #e50914, #ff1744, #e50914);
+  clip-path: ellipse(100% 4px at 50% 100%);
+  z-index: 15;
+}
+
+.bottom {
+    position: relative;
+    color: white;
+    padding: 30px;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    padding-left: 140px;
+    margin-bottom: 15px;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    padding: 0 25px;
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+}
+
+.card-item {
+    position: relative;
+    width: 200px;
+}
+
+.card-item img {
+    width: auto;
+    height: 245px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.rank-number {
+    position: absolute;
+    bottom: -8px;
+    left: -35px;
+    z-index: 11;
+    color: black;
+    font-size: 90px;
+    font-weight: 900;
+    font-family: "Arial Black", "Helvetica", sans-serif;
+    -webkit-text-stroke: 3px white;
+    text-stroke: 3px white;
+    line-height: 1;
+}
+
+.separation {
+    padding-top: 1%;
+    height: 7px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    z-index: 20;
+}
+
+.faq {
+    background-color: black;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 140px;
+    margin-bottom: 40px;
+}
+
+.faqbox {
+    display: flex;
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    width: 75vw;
+    background-color: rgb(55, 55, 55);
+    color: white;
+    padding: 20px;
+    margin-left: 140px;
+    justify-content: space-between;
+}
+
+.faqbox:hover{
+    background-color: rgb(89, 89, 89);
+}
+
+.sep {
+    margin: 7px;
+}
+
+footer {
+    color: white;
+    max-width: 60vw;
+    margin: auto;
+    padding: 60px;
+}
+
+footer .questions {
+    padding: 34px 0;
+}
+
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-item a {
+    color: rgb(179, 179, 179);
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.footer-item a:hover {
+    text-decoration: underline;
+}
+
+.reasons-section {
+    background-color: black;
+    padding: 70px 140px;
+    color: white;
+}
+
+.reasons-section h2 {
+    font-size: 32px;
+    font-weight: 900;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 50px;
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    max-width: 1400px;
+}
+
+.reason-card {
+    background: linear-gradient(135deg, #232773 0%, #1e1e42 100%);
+    border-radius: 16px;
+    padding: 30px;
+    position: relative;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.reason-card h3 {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 12px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.2;
+}
+
+.reason-card p {
+    font-size: 14px;
     font-weight: 400;
-    font-size: 18px;
-    letter-spacing: -1px;
+    line-height: 1.4;
+    color: #b3b3b3;
+    font-family: 'Open Sans', sans-serif;
+    flex-grow: 1;
+}
+
+.reason-icon {
+    align-self: flex-end;
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 20px;
+}
+
+.tv-icon {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    border-radius: 8px;
+    position: relative;
+}
+
+.tv-icon::after {
+    content: "📺";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+}
+
+.download-icon {
+    background: linear-gradient(45deg, #a55eea, #8854d0);
+    border-radius: 50%;
+    position: relative;
+}
+
+.download-icon::after {
+    content: "⬇";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+}
+
+.watch-icon {
+    background: linear-gradient(45deg, #ff9ff3, #f368e0);
+    border-radius: 50%;
+    position: relative;
+}
+
+.watch-icon::after {
+    content: "🔍";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+}
+
+.kids-icon {
+    background: linear-gradient(45deg, #feca57, #ff9ff3);
+    border-radius: 12px;
+    position: relative;
+}
+
+.kids-icon::after {
+    content: "👶";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+}
+
+.after {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    padding: 20px 140px;
+    background-color: black;
+}
+
+.ground {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: black;
+    padding: 20px 140px;
+}
+
+.ground .email {
+    width: 350px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgb(114, 114, 114);
+    padding: 16px 20px;
+    color: white;
+    border-radius: 4px;
+    font-size: 16px;
+    height: 56px;
+    box-sizing: border-box;
+}
+
+.ground button[type="submit"] {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 16px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 24px;
+    font-weight: 600;
+    height: 56px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .reasons-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    
+    .reasons-section {
+        padding: 50px 20px;
+    }
+    
+    .reason-card {
+        padding: 20px;
+    }
+    
+    .reason-card h3 {
+        font-size: 18px;
+    }
+    
+    .reason-card p {
+        font-size: 12px;
+    }
 }
