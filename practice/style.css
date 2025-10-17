@@ -1,10 +1,12 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background-color: black;
+  overflow-x: hidden;
 }
 
 .top {
@@ -14,7 +16,7 @@ body {
   background-size: cover;
   background-position: center 11%;
   height: 700px;
-  width: 100vw;
+  width: 100%;
 }
 
 .box {
@@ -26,16 +28,18 @@ body {
   background-color: black;
 }
 nav {
-  max-width: 90vw;
+  max-width: 100%;
+  width: 100%;
   justify-content: space-between;
   margin: auto;
   display: flex;
   align-items: center;
   height: 100px;
+  padding: 0 20px;
 }
 
 nav img {
-  padding-left: 50px;
+  padding-left: 20px;
   padding-top: 0px;
   color: red;
   width: 175px;
@@ -44,7 +48,7 @@ nav img {
 }
 
 .top-right {
-  margin-right: 6%;
+  margin-right: 20px;
   margin-top: -1%;
   z-index: 10;
 }
@@ -176,23 +180,32 @@ button[type="submit"] {
     font-size: 22px;
     font-weight: 700;
     font-family: "Open Sans", sans-serif;
-    padding-left: 140px;
+    padding-left: 160px;
     margin-bottom: 15px;
 }
 
 .cards-container {
     display: flex;
     flex-direction: row;
-    gap: 3%;
-    padding: 0 25px;
+    gap: 20px;
+    padding: 0 160px;
     overflow: hidden;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
+    max-width: 100%;
+    box-sizing: border-box;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.cards-container::-webkit-scrollbar {
+    display: none; /* WebKit */
 }
 
 .card-item {
     position: relative;
     width: 200px;
+    flex-shrink: 0;
 }
 
 .card-item img {
@@ -212,7 +225,7 @@ button[type="submit"] {
     font-weight: 900;
     font-family: "Arial Black", "Helvetica", sans-serif;
     -webkit-text-stroke: 3px white;
-    text-stroke: 3px white;
+    -webkit-text-stroke: 3px white;
     line-height: 1;
 }
 
@@ -237,7 +250,7 @@ button[type="submit"] {
     padding: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 30px;
-    width: 75vw;
+    width: calc(100% - 280px);
     background-color: rgb(55, 55, 55);
     color: white;
     padding: 20px;
@@ -255,7 +268,7 @@ button[type="submit"] {
 
 footer {
     color: white;
-    max-width: 60vw;
+    max-width: calc(100% - 120px);
     margin: auto;
     padding: 60px;
 }
@@ -292,6 +305,8 @@ footer .questions {
     background-color: black;
     padding: 70px 140px;
     color: white;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .reasons-section h2 {
@@ -305,7 +320,8 @@ footer .questions {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
-    max-width: 1400px;
+    max-width: 100%;
+    width: 100%;
 }
 
 .reason-card {
